@@ -5,7 +5,7 @@ The eleVR Picture Player lets you watch 360 flat and stereo equirectangular pano
 
 eleVR Picture Player works with the native browser support currently being implemented by [Firefox](http://blog.bitops.com/blog/2014/06/26/first-steps-for-vr-on-the-web/) and [Chromium](https://drive.google.com/folderview?id=0BzudLt22BqGRbW9WTHMtOWMzNjQ&usp=sharing#list).
 
-The player is a fun fork of the eleVR Web Player for web video with some changes to optimize the player for showing panoramic pictures.
+The player is a fun fork of the [eleVR Web Player for web video](https://github.com/hawksley/eleVR-Web-Player) with some changes to optimize the player for showing panoramic pictures.
 
 Pictures shown in the player can be rotated using keyboard controls  (a/d, w/s, and q/e), as well as by the Oculus Rift if you are running an experimental webVR browser. You may be able to decrease video judder by setting your Oculus Display refresh rate to 60 Hz (the browser refreshes at 60 Hz and the slower mismatch can cause judder).
 
