@@ -1,7 +1,7 @@
-eleVR Web Player
+eleVR Picture Player
 ================
 
-The eleVR player lets you watch 360 flat and stereo video on your Oculus Rift or Android device with VR headset (Cardboard, Durovis Dive, etc.) from a web browser. It is written with js, html5, and webGL. It depends on the open source libraries as noted in the [3rd Party Libraries](https://github.com/hawksley/eleVR-Web-Player/blob/master/README.md#3rd-party-libraries) section. 
+The eleVR picture player lets you watch 360 flat and stereo equirectangular panoramas on your Oculus Rift, Android, or iPhone device with VR headset (Cardboard, Durovis Dive, etc.) from a web browser. It is written with js, html5, and webGL. It depends on the open source libraries as noted in the [3rd Party Libraries](https://github.com/hawksley/eleVR-Picture-Player/blob/master/README.md#3rd-party-libraries) section. 
 
 Videos shown in the player can be rotated using keyboard controls  (a/d, w/s, and q/e), as well as by the Oculus Rift if the vr.js plugin is installed. This does not work on DK2.
 
@@ -11,18 +11,10 @@ The native-support branch contains the current progress towards getting eleVR We
 
 eleVR Player was developed by [eleVR](http://eleVR.com). eleVR is a project of the Communications Design Group and is supported by SAP. The contributors to the project are [@hawksley](https://github.com/hawksley) and [@amluto](https://github.com/amluto).
 
-It currently supports spherical video with equirectangular projections and spherical 3D video with top/bottom equirectangular projections. eleVR Player Master does not come bundled with any video files, but you can get two small demo *.webm files from the gh-pages branch, one for each projection. Alternatively, you can use your own spherical video or can download larger mp4 files from the [eleVR Downloads Page](http://elevr.com/downloads/).
-
-### Installing the vr.js plugin ###
-You will need to get the vr.js plugin in order to use the eleVR Web Player with your Oculus Rift. If you just want to use the keyboard interface, no installation is necessary.
-
-Get the vr.js plugin here: https://github.com/benvanik/vr.js/ and follow the installation instructions. Installation instructions for Mac appear to be for Safari. To install for Chrome or Firefox, follow the Windows Chrome/Firefox installation instructions.
-
-Following that, you should be able to run the web player without further action. If you do have issues, please read the [issues section](https://github.com/hawksley/eleVR-Web-Player/blob/master/README.md#possible-issues-and-resolutions) below.
+It currently only supports spherical panoramic pictures with equirectangular projections and spherical 3D panoramas with top/bottom equirectangular projections.
 
 ### Support ###
-eleVR player should be supported on all browsers and systems that support the vr.js plugin.
-https://github.com/benvanik/vr.js/tree/master#supported-platforms
+eleVR player is supported by 
 
 ## Running your own video ##
 The easiest way to run your own video is to click the folder icon and load your video from there. You may then need to choose the projection for your video from the projection selector.
