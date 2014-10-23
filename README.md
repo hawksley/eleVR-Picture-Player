@@ -50,6 +50,9 @@ Make sure that you are using an experimental webVR version of the browser. If it
 ###Android or iPhone is not working###
 You may not be on a sufficiently recent version of Android or iOS. webGL support did not exist before Android 4.3 and iOS 8.
 
+###My panorama isn't loading###
+Your image may exceed the max texture size of your device. This is likely to be 4096x4096, but you can check by going here: https://www.khronos.org/registry/webgl/conformance-suites/1.0.2/conformance/limits/gl-max-texture-dimensions.html
+
 ## Future Work ##
 The picture player is more of a fun diversion from the video player than a serious project of it's own. As such, there isn't that much extra work planned on it, other than occasionally updating it to match desirable features of the web player and potentially adding additional projections so as to be able to show cube map panoramas and similar.
 
