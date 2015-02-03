@@ -266,7 +266,7 @@ function drawOneEye(eye, projectionMatrix) {
   if(typeof vrSensor !== 'undefined') {
     var state = vrSensor.getState();
     var totalRotation = quat.create();
-    if (typeof state.orientation !== 'undefined'
+    if (state !== null && state.orientation !== null && typeof state.orientation !== 'undefined'
        && state.orientation.x != 0
        && state.orientation.y != 0
        && state.orientation.z != 0
