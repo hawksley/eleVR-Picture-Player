@@ -173,20 +173,9 @@ function setCanvasSize() {
   screenHeight = window.innerHeight;
 
   if (typeof vrHMD !== 'undefined' && typeof util.isFullscreen() !== 'undefined' && util.isFullscreen()) {
-    var canvasWidth, canvasHeight;
-
-    if (typeof vrHMD.getRecommendedRenderTargetSize !== 'undefined') {
-      var rect = vrHMD.getRecommendedRenderTargetSize();
-      canvasWidth = rect.width;
-      canvasHeight = rect.height;
-    } else if (typeof vrHMD.getRecommendedEyeRenderRect !== 'undefined') {
-      var rectHalf = vrHMD.getRecommendedEyeRenderRect('right');
-      canvasWidth = rectHalf.width * 2;
-      canvasHeight = rectHalf.height;
-    }
-
-    canvas.width = canvasWidth;
-    canvas.height = canvasHeight;
+    var rectHalf = vrHMD.getEyeParameters('right').renderRect;
+    canvas.width = rectHalf.width * 2;
+    canvas.height = rectHalf.height;
 
     canvas.style.width = screenWidth + 'px';
     canvas.style.height = screenHeight + 'px';
@@ -328,9 +317,11 @@ function drawScene(frameTime) {
 
   var perspectiveMatrix = mat4.create();
   if (typeof vrHMD !== 'undefined') {
-    perspectiveMatrix = util.mat4PerspectiveFromVRFieldOfView(vrHMD.getCurrentEyeFieldOfView('left'), 0.1, 10);
+    var leftParams = vrHMD.getEyeParameters('left');
+    var rightParams = vrHMD.getEyeParameters('right');
+    perspectiveMatrix = util.mat4PerspectiveFromVRFieldOfView(leftParams.recommendedFieldOfView, 0.1, 10);
     drawOneEye(0, perspectiveMatrix);
-    perspectiveMatrix = util.mat4PerspectiveFromVRFieldOfView(vrHMD.getCurrentEyeFieldOfView('right'), 0.1, 10);
+    perspectiveMatrix = util.mat4PerspectiveFromVRFieldOfView(rightParams.recommendedFieldOfView, 0.1, 10);
     drawOneEye(1, perspectiveMatrix);
   } else {
     var ratio = (canvas.width/2)/canvas.height;
