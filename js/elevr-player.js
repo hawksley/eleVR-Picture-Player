@@ -506,7 +506,7 @@ function createControls() {
   });
 
   pictureSelect.addEventListener("change", function() {
-    projection = pictureSelect.value[0];
+    projection = projectionSelect.value[0];
     projectionSelect.value = projection;
     loadImage(pictureSelect.value.substring(1));
   });
